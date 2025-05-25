@@ -37,7 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'auth_app',
 ]
+
+AUTH_USER_MODEL = 'auth_app.CustomUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -65,6 +76,7 @@ TEMPLATES = [
         },
     },
 ]
+AUTH_USER_MODEL = 'auth_app.CustomUser'
 
 WSGI_APPLICATION = 'QuickInvoice.wsgi.application'
 
