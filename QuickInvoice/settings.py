@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'auth_app',
 ]
 
-AUTH_USER_MODEL = 'auth_app.CustomUser'
+AUTH_USER_MODEL = 'auth_app.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -76,7 +76,7 @@ TEMPLATES = [
         },
     },
 ]
-AUTH_USER_MODEL = 'auth_app.CustomUser'
+AUTH_USER_MODEL = 'auth_app.User'
 
 WSGI_APPLICATION = 'QuickInvoice.wsgi.application'
 
